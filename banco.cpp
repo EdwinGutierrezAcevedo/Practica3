@@ -9,7 +9,7 @@ void Banco::mostrarBienvenida() {
     std::cout << "******************************************" << std::endl;
     std::cout << "* Bienvenido al Banco UDEA               *" << std::endl;
     std::cout << "******************************************" << std::endl;
-    std::cout << "Por favor, seleccione una opción:" << std::endl;
+    std::cout << "Por favor, seleccione una opcion:" << std::endl;
     std::cout << "1. Entrar como Administrador" << std::endl;
     std::cout << "2. Entrar como Usuario" << std::endl;
     //std::cout << std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
@@ -17,35 +17,33 @@ void Banco::mostrarBienvenida() {
 void Banco::iniciarSesion(const int& m,const int& n) {
     int opcion;
     std::cin >> opcion;
-    std::cin.ignore(); // Limpiar el buffer de entrada
+    std::string texto=leerArchivoBinario("archivobinario.bin");
 
     if (opcion == 1) {
         std::string contrasenaAdmin;
-        std::cout << "Ingrese su contraseña: ";
+        std::cout << "Ingrese su contrasena: ";
         std::getline(std::cin, contrasenaAdmin);
-        std::string texto=leerArchivoBinario("archivobinario.bin");
+
         if(admin.buscarContrasena(texto,contrasenaAdmin)){
-            menuAdministrador();
+            menuAdministrador(texto);
         }
         else{
             std::cout<<"Contrasena incorrecta"<<std::endl;
         }
 
     } else if (opcion == 2) {
-        std::string cedula, contrasena;
-        std::cout << "Ingrese su cédula: ";
-        std::getline(std::cin, cedula);
-        std::cout << "Ingrese su contraseña: ";
-        std::getline(std::cin, contrasena);
-        /*
-        Usuario* usuario = admin.buscarUsuario(cedula);
-        if (usuario && usuario->getContrasena() == contrasena) {
-            menuUsuario(*usuario);
-        } else {
+        std::string cedula, contrasena,saldo;
+        std::cout << "Ingrese su cedula: ";
+        std::cin>>cedula;
+        std::cout << "Ingrese su contrasena: ";
+        std::cin>>contrasena;
+        saldo=usuario.obtenerSaldo(texto,contrasena,cedula);
+        std::cout<<"Su saldo es de: "<<saldo<<std::endl;
+        /* else {
             std::cout << "Cédula o contraseña incorrecta." << std::endl;
         }*/
     } else {
-        std::cout << "Opción no válida." << std::endl;
+        std::cout << "Opción no valida." << std::endl;
     }
     std::cout << std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
 }
@@ -73,14 +71,14 @@ void Banco::menuUsuario(Usuario &usuario) {
             std::cout << "Saliendo..." << std::endl;
             break;
         default:
-            std::cout << "Opción no válida." << std::endl;
+            std::cout << "Opcion no valida." << std::endl;
         }
     } while (opcion != 3);
     //std::cout << std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
 }
 
 
-void Banco::menuAdministrador() {
+void Banco::menuAdministrador( std::string texto) {
     int opcion;
     do {
         std::cout << "1. Crear usuario" << std::endl;
@@ -89,22 +87,15 @@ void Banco::menuAdministrador() {
 
         switch (opcion) {
         case 1: {
-            std::string cedula, contrasena;
-            double saldo;
-            std::cout << "Ingrese la cédula: ";
-            std::getline(std::cin, cedula);
-            std::cout << "Ingrese la contraseña: ";
-            std::getline(std::cin, contrasena);
-            std::cout << "Ingrese el saldo inicial: ";
-            std::cin >> saldo;
-            //admin.agregarDatos();
+            admin.agregarDatos(texto);
             break;
         }
         case 2:
             std::cout << "Saliendo..." << std::endl;
+            //escribir el texto otra vez a un archivo binario
             break;
         default:
-            std::cout << "Opción no válida." << std::endl;
+            std::cout << "Opcion no valida." << std::endl;
         }
     } while (opcion != 2);
     std::cout << std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
@@ -304,7 +295,7 @@ std::string Banco::leerArchivoBinario(const std::string& nombreArchivo) { //toma
     inFile.close();
 
     std::string contAux=deBinarioATexto(contenido);
-    std::cout<<contAux<<std::endl;
+    //std::cout<<contAux<<std::endl;
 
 
     return contAux;

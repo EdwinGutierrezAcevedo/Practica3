@@ -1,10 +1,12 @@
 #ifndef BANCO_H
 #define BANCO_H
 #include "administrador.h"
+#include "usuario.h"
 
 class Banco
 {
     Administrador admin;
+    Usuario usuario;
     std::string codificacion1(std::string original, const int &n);
     std::string deCodificacion1(std::string copiaOriginal,const int& n);
     std::string codificacion2(std::string original, const int &n);
@@ -15,7 +17,7 @@ public:
     void mostrarBienvenida();
     void iniciarSesion(const int &m, const int &n);
     void menuUsuario(Usuario &usuario);
-    void menuAdministrador();
+    void menuAdministrador(std::string texto);
     std::string codificar(std::string original, const int &m, const int &n);
     std::string deCodificar(std::string stringCodificado, const int &m, const int &n);
     void escribirArchivoBinario(const std::string& nombreArchivoTexto, const std::string& nombreArchivoBinario);
