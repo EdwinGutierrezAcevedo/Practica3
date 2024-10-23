@@ -21,7 +21,7 @@ void Administrador::agregarDatos(std::string &original) {
     std::cin>>contrasena;
     std::cout << "Ingrese su saldo: "<<std::endl;
     std::cin>>saldo;
-    original += "\n" + cedula + "|" + contrasena + "|" + saldo;
+    original += cedula + "|" + contrasena + "|" + saldo + "\n";
     std::cout<<"Usuario creado"<<std::endl;
 }
 
@@ -58,10 +58,7 @@ void Administrador::menuUsuario(unsigned int saldo) {
             if(saldo-1000.0>=0){
                 std::cout << std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
                 std::cout << std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
-                std::cout<<"Su saldo es de : "<<saldo<<" - 1000 COP";
-                saldo-=1000.0;
-                std::cout<<" = "<<saldo<<std::endl;
-
+                std::cout<<"Su saldo es de : "<<saldo<<std::endl;
             }
             else{
                 std::cout << std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
@@ -72,7 +69,7 @@ void Administrador::menuUsuario(unsigned int saldo) {
         case 2: {
             unsigned int cantidad;
             if(saldo-1000>=0){
-                saldo-=1000;
+                //saldo-=1000;
                 std::cout << "Ingrese la cantidad a retirar: ";
                 std::cin >> cantidad;
                 usuario1.retirarDinero(cantidad,saldo);
@@ -91,4 +88,7 @@ void Administrador::menuUsuario(unsigned int saldo) {
             std::cout << "Opcion no valida." << std::endl;
         }
     } while (opcion != 3&&opcion != 2);
+    std::cout<<"Su saldo es de : "<<saldo<<" - 1000 COP";
+    saldo-=1000.0;
+    std::cout<<" = "<<saldo<<std::endl;
 }

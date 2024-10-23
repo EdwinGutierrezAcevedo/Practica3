@@ -10,8 +10,9 @@ int main() {
     std::cin>>m;
     std::cout<<"Introduzca la semilla: "<<std::endl;
     std::cin>>n;
-    banco.escribirArchivoBinario("archivotexto.txt", "archivobinario.bin");
+    //banco.escribirArchivoBinario("archivotexto.txt", "archivo_binario.bin",m,n); toma un txt normmal y crea un binario codificado
+    banco.escribirArchivoBinario("archivo_texto.txt", "archivo_binario.bin",m,n); //toma un txt codificado y crea un binario normal
     banco.iniciarSesion(m,n);
-    banco.escribirArchivoTexto("archivobinario.bin","archivotexto.txt");
+    banco.escribirArchivoTexto("archivo_binario.bin","archivo_texto.txt",m,n); //toma un binario codificado y lo escribe tal como esta en un archivo txt
     return 0;
 }

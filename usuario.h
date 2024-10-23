@@ -17,7 +17,7 @@ public:
     std::string getCedula() const;
     std::string getContrasena() const;
     double getSaldo() const;
-    void retirarDinero(double cantidad, double saldo);
+    void retirarDinero(unsigned int cantidad, unsigned int& saldo);
     std::string obtenerSaldo(const std::string& datos, const std::string& contrasena, const std::string &cedula) const;
 };
 
