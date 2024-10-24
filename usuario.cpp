@@ -30,12 +30,11 @@ double Usuario::getSaldo() const {
 }
 
 
-void Usuario::retirarDinero(double cantidad,double saldo) {
+void Usuario::retirarDinero(unsigned int cantidad,unsigned int& saldo) {
     if (cantidad+1000.0 <= saldo) {
         saldo -= cantidad;
-        std::cout << "Retiro exitoso. Saldo restante: " << saldo <<" - 1000 COP";
-        saldo-=1000.0;
-        std::cout<<" = "<<saldo<<std::endl;
+        std::cout << "Retiro exitoso." << std::endl;
+        //saldo-=1000.0;
     } else {
         std::cout << "Saldo insuficiente." << std::endl;
     }

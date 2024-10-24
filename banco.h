@@ -17,7 +17,7 @@ public:
     void mostrarBienvenida();
     void iniciarSesion(const int &m, const int &n);
     //void menuUsuario(Usuario &usuario);
-    void menuAdministrador(std::string texto);
+    void menuAdministrador(std::string &texto);
     std::string codificar(std::string original, const int &m, const int &n);
     std::string deCodificar(std::string stringCodificado, const int &m, const int &n);
     void escribirArchivoBinario(const std::string& nombreArchivoTexto, const std::string& nombreArchivoBinario);

@@ -17,12 +17,13 @@ void Banco::mostrarBienvenida() {
 }
 
 void Banco::iniciarSesion(const int& m,const int& n) {
+    std::string texto=leerArchivoBinario("archivobinario.bin");
     int opcion;
     do{
         mostrarBienvenida();
 
         std::cin >> opcion;
-        std::string texto=leerArchivoBinario("archivobinario.bin");
+
         if (opcion == 1) {
             std::string contrasenaAdmin;
             std::cout << "Ingrese su contrasena: ";
@@ -35,6 +36,7 @@ void Banco::iniciarSesion(const int& m,const int& n) {
             }
         }
         else if (opcion == 2) {
+            //std::cout<<texto<<std::endl;
             std::string cedula, contrasena,saldo;
             std::cout << "Ingrese su cedula: ";
             std::cin>>cedula;
@@ -46,7 +48,7 @@ void Banco::iniciarSesion(const int& m,const int& n) {
                 admin.menuUsuario(saldoTotal);
             }
             else {
-                std::cout << "Cedula o contraseña incorrecta." << std::endl;
+                std::cout << "Cedula o contrasena incorrecta." << std::endl;
             }
         }
         else if(opcion==3){
@@ -58,7 +60,7 @@ void Banco::iniciarSesion(const int& m,const int& n) {
     }while(opcion!=3);
 }
 
-void Banco::menuAdministrador( std::string texto) {
+void Banco::menuAdministrador( std::string& texto) {
     int opcion;
     do {
         std::cout << "1. Crear usuario" << std::endl;
@@ -244,11 +246,11 @@ void Banco::escribirArchivoBinario(const std::string& nombreArchivoTexto,const s
     std::string stringBits = deTextoABinario(contenidoTexto);
 
     //decodificar contenido
-    // std::string stringBitsCodificado=Codificar(stringBits,m,n); //se codifica y se guarda el contenido en bits
+    std::string stringBitsCodificado=deCodificar(stringBits,m,n); //se codifica y se guarda el contenido en bits
 
     //Escribir archivo
     if (archivo_binario.is_open()) {
-        archivo_binario.write(stringBits.c_str(), stringBits.size());
+        archivo_binario.write(stringBitsCodificado.c_str(), stringBitsCodificado.size());
     }
 
     // Cerrar los archivos
