@@ -1,0 +1,33 @@
+# ninja log v6
+6	289	7513364852372396	p3_autogen/timestamp	a7d7154aa9e88620
+6	289	7513364852372396	p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+6	289	7513364852372396	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/timestamp	a7d7154aa9e88620
+6	289	7513364852372396	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+292	504	7513364853032002	CMakeFiles/p3.dir/p3_autogen/mocs_compilation.cpp.obj	c7144d140b16dde0
+301	1329	7513364853091107	CMakeFiles/p3.dir/main.cpp.obj	949d522c346ec997
+344	1396	7513364853403540	CMakeFiles/p3.dir/usuario.cpp.obj	325a85c6813e7dbd
+310	1490	7513364853091107	CMakeFiles/p3.dir/banco.cpp.obj	2d6c13bbe1b21209
+22	207	7513365449212657	p3_autogen/timestamp	a7d7154aa9e88620
+22	207	7513365449212657	p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+22	207	7513365449212657	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/timestamp	a7d7154aa9e88620
+22	207	7513365449212657	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+208	846	7513365451201086	CMakeFiles/p3.dir/administrador.cpp.obj	f2efa3b4c1976eb9
+846	1114	7513365457590911	p3.exe	26b1f3941071b0a9
+10	163	7513366202949581	p3_autogen/timestamp	a7d7154aa9e88620
+10	163	7513366202949581	p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+10	163	7513366202949581	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/timestamp	a7d7154aa9e88620
+10	163	7513366202949581	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+165	1029	7513366204547582	CMakeFiles/p3.dir/banco.cpp.obj	2d6c13bbe1b21209
+1029	1302	7513366213190006	p3.exe	26b1f3941071b0a9
+33	181	7513366725589088	p3_autogen/timestamp	a7d7154aa9e88620
+33	181	7513366725589088	p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+33	181	7513366725589088	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/timestamp	a7d7154aa9e88620
+33	181	7513366725589088	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+183	1039	7513366727146120	CMakeFiles/p3.dir/banco.cpp.obj	2d6c13bbe1b21209
+1040	1326	7513366735727349	p3.exe	26b1f3941071b0a9
+13	163	7513369668981749	p3_autogen/timestamp	a7d7154aa9e88620
+13	163	7513369668981749	p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+13	163	7513369668981749	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/timestamp	a7d7154aa9e88620
+13	163	7513369668981749	C:/Users/Edwin Gutierrez/Documents/info2/practicas/p3/p3/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/p3_autogen/mocs_compilation.cpp	a7d7154aa9e88620
+164	1091	7513369670495978	CMakeFiles/p3.dir/banco.cpp.obj	2d6c13bbe1b21209
+1091	1352	7513369679774038	p3.exe	26b1f3941071b0a9
