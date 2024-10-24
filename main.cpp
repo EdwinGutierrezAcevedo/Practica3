@@ -11,7 +11,6 @@ int main() {
     std::cout<<"Introduzca la semilla: "<<std::endl;
     std::cin>>n;
     banco.escribirArchivoBinario("archivotexto.txt", "archivobinario.bin");
-    banco.mostrarBienvenida();
     banco.iniciarSesion(m,n);
     banco.escribirArchivoTexto("archivobinario.bin","archivotexto.txt");
     return 0;

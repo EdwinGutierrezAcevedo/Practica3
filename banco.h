@@ -16,7 +16,7 @@ public:
     Banco();
     void mostrarBienvenida();
     void iniciarSesion(const int &m, const int &n);
-    void menuUsuario(Usuario &usuario);
+    //void menuUsuario(Usuario &usuario);
     void menuAdministrador(std::string texto);
     std::string codificar(std::string original, const int &m, const int &n);
     std::string deCodificar(std::string stringCodificado, const int &m, const int &n);

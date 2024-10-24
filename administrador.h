@@ -14,6 +14,7 @@ public:
 
     void agregarDatos(std::string &original);
     bool buscarContrasena(const std::string& contrasenas, const std::string& contrasenaAComparar);
+    void menuUsuario(unsigned int saldo);
 };
 
 #endif // ADMINISTRADOR_H
