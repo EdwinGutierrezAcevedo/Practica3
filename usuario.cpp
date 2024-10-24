@@ -45,3 +45,44 @@ void Usuario::retirarDinero(double cantidad) {
 std::string Usuario::toString() const {
     return cedula + "|" + contrasena + "|" + std::to_string(saldo);
 }
+
+
+std::string Usuario::obtenerSaldo(const std::string& datos, const std::string& contrasena, const std::string& cedula) {
+    std::string contenido, contrasena_g, cedula_g, saldo_g,saldo="";
+    int contFilas = 0, contColumnas = 0;
+    char caracter;
+
+    for (size_t i = 0; i < datos.size(); i++) {
+        caracter = datos[i];
+
+        if (caracter == '\n') {
+            saldo_g = contenido.substr(0, contenido.size());
+            contenido = "";
+            contFilas++;
+            contColumnas = 0;
+        } else {
+            contenido += caracter;
+
+            if (caracter == '|' && contColumnas == 0) {
+                cedula_g = contenido.substr(0, contenido.size() - 1);
+                contenido = "";
+                contColumnas++;
+            } else if (caracter == '|' && contColumnas == 1) {
+                contrasena_g = contenido.substr(0, contenido.size() - 1);
+                contenido = "";
+                contColumnas++;
+            } /*else if (caracter == '\n' && contColumnas == 2) {
+                saldo_g = contenido.substr(0, contenido.size() - 1);
+                contenido = "";
+                contColumnas++;
+            }*/
+        }
+
+        if (cedula_g == cedula && contrasena_g == contrasena) {
+            saldo=saldo_g;
+        }
+    }
+
+    return saldo;
+}
+

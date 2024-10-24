@@ -5,7 +5,7 @@ class Administrador
 {
     std::string contrasenaAdmin;
 
-    Usuario usuario;
+    Usuario usuario1;
 
 
 public:

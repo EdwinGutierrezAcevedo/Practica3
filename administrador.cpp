@@ -15,14 +15,17 @@ std::string Administrador::getContrasenaAdmin() const
 void Administrador::agregarDatos(std::string &original) {
     std::string cedula, contrasena, saldo;
 
-    std::cout << "Ingrese su cédula: ";
-    std::getline(std::cin, cedula);
-    std::cout << "Ingrese su contraseña: ";
-    std::getline(std::cin, contrasena);
-    std::cout << "Ingrese su saldo: ";
-    std::getline(std::cin, saldo);
-
+    std::cout << "Ingrese su cedula: "<<std::endl;
+    std::cin>>cedula;
+    //std::getline(std::cin, cedula);
+    std::cout << "Ingrese su contrasena: "<<std::endl;
+    std::cin>>contrasena;
+    //std::getline(std::cin, contrasena);
+    std::cout << "Ingrese su saldo: "<<std::endl;
+    //std::getline(std::cin, saldo);
+    std::cin>>saldo;
     original += "\n" + cedula + "|" + contrasena + "|" + saldo;
+    std::cout<<original<<std::endl;
 }
 
 bool Administrador::buscarContrasena(const std::string& contrasenas, const std::string& contrasenaAComparar) {

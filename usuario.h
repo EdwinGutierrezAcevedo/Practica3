@@ -20,6 +20,7 @@ public:
     void consultarSaldo() const;
     void retirarDinero(double cantidad);
     std::string toString() const;
+    std::string obtenerSaldo(const std::string& datos, const std::string& contrasena, const std::string &cedula);
     //void fromString(const std::string &data);
 };
 
